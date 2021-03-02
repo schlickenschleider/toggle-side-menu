@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Sidebar Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="side-menu" class="sideMenu">
+        <a href="javascript:void(0)"class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="main-menu">
+            <h2>Sidemenu</h2>
+            <a href="#"><i class="fa fa-home"></i>Home</a>
+            <a href="#"><i class="fa fa-file-o"></i>Services</a>
+            <a href="#"><i class="fa fa-book"></i>Portfolio</a>
+            <a href="#"><i class="fa fa-users"></i>About</a>
+            <a href="#"><i class="fa fa-phone"></i>Contact</a>
+        </div>
+    </div>
+
+    <div id="content-area">
+        <span style="font-size: 30px;cursor: pointer" onclick="openNav()">&#9776;</span>
+        <div class="content-text">
+            <h2>Toggle Sidebar Navigation</h2>
+            <h3>HTML CSS JS</h3>
+        </div>
+    </div>
+
+    <script>
+
+        function openNav() {
+            document.getElementById("side-menu").style.width = "300px";
+            document.getElementById("content-area").style.marginLeft = "300px";
+        }
+
+        function closeNav() {
+            document.getElementById("side-menu").style.width = "0";
+            document.getElementById("content-area").style.marginLeft = "0";
+        }
+
+    </script>
+
+</body>
+</html>
